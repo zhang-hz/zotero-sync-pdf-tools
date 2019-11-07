@@ -1,0 +1,5 @@
+<!ENTITY zotero.syncpdftools.openPDF.label "Open Synced PDF">
+<!ENTITY zotero.syncpdftools.rebaseAttachment.label "Rebase Attachment">
+<!ENTITY zotero.syncpdftools.prefBaseDir.label "Base Dir">
+<!ENTITY zotero.syncpdftools.prefLocalDir.label "Local Dir">
+<!ENTITY zotero.syncpdftools.prefConvertDirList.label "Used Dir">

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<RDF:RDF
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+    xmlns:NC="http://home.netscape.com/NC-rdf#"
+    xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <RDF:Description
+        RDF:about="rdf:#$x61SL3"
+        em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+        em:minVersion="2.0"
+        em:maxVersion="20.*"/>
+    <RDF:Description
+        RDF:about="urn:mozilla:install-manifest"
+        em:id="syncpdftools@siliconeer.tech"
+        em:name="Sync PDF Tools"
+        em:version="1.0.0"
+        em:type="2"
+        em:creator="Zhang Haozhi"
+        em:description="Zotero plugin for opening PDFs in attachment library"
+        em:homepageURL="https://siliconeer.tech">
+        <em:type>2</em:type>
+        <em:targetApplication RDF:resource="rdf:#$x61SL3"/>
+        <em:targetApplication>
+            <Description>
+                <em:id>zotero@chnm.gmu.edu</em:id>
+                <em:minVersion>3.0b1</em:minVersion>
+                <em:maxVersion>5.0.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+        <em:localized>
+            <Description>
+                <em:locale>zh-CN</em:locale>
+                <em:name>Sync PDF Tools</em:name>
+                <em:description>用来打开附件库中的文档</em:description>
+            </Description>
+        </em:localized>
+    </RDF:Description>
+</RDF:RDF>

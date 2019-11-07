@@ -1,0 +1,5 @@
+<!ENTITY zotero.syncpdftools.openPDF.label "打开附件库中的PDF">
+<!ENTITY zotero.syncpdftools.rebaseAttachment.label "修复附件地址">
+<!ENTITY zotero.syncpdftools.prefBaseDir.label "附件库地址前缀">
+<!ENTITY zotero.syncpdftools.prefLocalDir.label "本地附件库位置">
+<!ENTITY zotero.syncpdftools.prefConvertDirList.label "曾使用附件库位置">

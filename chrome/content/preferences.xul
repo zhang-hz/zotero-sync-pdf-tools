@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://syncpdftools/locale/overlay.dtd">
+
+<overlay id="syncpdftools-preferences"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <prefwindow id="zotero-prefs">
+    <prefpane id="zotero-prefpane-syncpdftools"
+            insertafter="zotero-prefpane-advanced"
+            label="Sync PDF Tools"
+            image="chrome://syncpdftools/skin/favicon.png"
+						onpaneload="initPreferences();"
+            >
+      <preferences id="zotero-preferences-syncpdftools">
+        <preference id="pref-syncpdftools-basedir" name="extensions.zotero.syncpdftools.basedir" type="string"/>
+        <preference id="pref-syncpdftools-localdir" name="extensions.zotero.syncpdftools.localdir" type="string"/>
+        <preference id="pref-syncpdftools-convertdirlist" name="extensions.zotero.syncpdftools.convertdirlist" type="string"/>
+      </preferences>
+      <vbox flex="1">
+        <grid>
+          <columns>
+            <column/>
+            <column flex="1"/>
+          </columns>
+          <rows>
+            <row>
+              <label value="&zotero.syncpdftools.prefBaseDir.label;"/>
+              <textbox id="id-syncpdftools-basedir" preference="pref-syncpdftools-basedir"/>
+            </row>
+            <row>
+              <label value="&zotero.syncpdftools.prefLocalDir.label;"/>
+              <textbox id="id-syncpdftools-localdir" preference="pref-syncpdftools-localdir"/>
+            </row>
+            <row>
+              <label value="&zotero.syncpdftools.prefConvertDirList.label;"/>
+              <textbox id="id-syncpdftools-convertdirlist" preference="pref-syncpdftools-convertdirlist"/>
+            </row>
+          </rows>
+        </grid>
+      </vbox>
+    </prefpane>
+  </prefwindow>
+
+	<!-- Include the main extension logic -->
+	<script src="chrome://syncpdftools/content/scripts/preferences.js"/>
+
+</overlay>

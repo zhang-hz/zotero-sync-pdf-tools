@@ -1,0 +1,9 @@
+content syncpdftools chrome/content/
+skin syncpdftools default	chrome/skin/default/syncpdftools/
+
+overlay chrome://zotero/content/zoteroPane.xul chrome://syncpdftools/content/overlay.xul
+overlay chrome://zotero/content/preferences/preferences.xul chrome://syncpdftools/content/preferences.xul
+
+locale  syncpdftools  en-US   chrome/locale/en-US/
+locale  syncpdftools  zh-CN   chrome/locale/zh-CN/
+

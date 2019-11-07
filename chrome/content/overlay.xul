@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://syncpdftools/locale/overlay.dtd">
+
+<overlay id="syncpdftools" 
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="chrome://syncpdftools/content/scripts/syncpdftools.js"/>
+
+
+    <popup id="zotero-itemmenu">
+        <menuitem id="zotero-itemmenu-syncpdftools-openpdf" label="&zotero.syncpdftools.openPDF.label;" oncommand="Zotero.SyncPDFTools.openSelectedItems()"/>
+        <menuitem id="zotero-itemmenu-syncpdftools-rebaseatt" label="&zotero.syncpdftools.rebaseAttachment.label;" oncommand="Zotero.SyncPDFTools.rebaseSelectedAttachments()"/>
+    </popup>
+</overlay>

@@ -1,0 +1,6 @@
+.zotero-syncpdftools-icon {
+	list-style-image: url('chrome://syncpdftools/skin/favicon.png');
+}
+.zotero-syncpdftools-no-icon {
+	list-style-image: none;
+}
