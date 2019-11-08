@@ -4,8 +4,7 @@ Zotero.SyncPDFTools = new function () {
         
     }
 
-
-    //Prefence Section
+    //Preference Section
 
     this.getPref = function (pref) {
         return Zotero.Prefs.get('extensions.zotero.syncpdftools.' + pref, true);
@@ -46,15 +45,15 @@ Zotero.SyncPDFTools = new function () {
         let baseDir = this.baseDir();
         let convertDirList = this.convertDirList();
         convertDirList.push(baseDir);
-        Zotero.debug("originDir:" + path)
-        Zotero.debug("baseDir:" + baseDir)
+        Zotero.debug("Origin Path:" + path)
+        Zotero.debug("Base Path:" + baseDir)
         for(let i = 0; i < convertDirList.length;i++){
             let dir = convertDirList[i];
             Zotero.debug(dir)
             if(path.match(dir.replace(/\\/g, "\\\\")) != null ){
                 Zotero.debug(path)
                 let alrdir = path.replace(dir, "");
-                Zotero.debug("alt path:" + alrdir)
+                Zotero.debug("Relative address:" + alrdir)
                 return alrdir
             }
         }
@@ -65,7 +64,6 @@ Zotero.SyncPDFTools = new function () {
     this.getFullPath = function(path){
         let localDir = this.localDir();
         path = localDir.replace("//", "/") + path
-        Zotero.debug(path)
         if (path.indexOf("/") != 0) {
             path = path.replace(/\//g, "\\").replace(/\\\\/g,"\\");
             if(Zotero.isWin){
@@ -80,7 +78,7 @@ Zotero.SyncPDFTools = new function () {
             }
             
         }
-        Zotero.debug("full path:" + path)
+        Zotero.debug("Converted Path:" + path)
         return path
     }
 
@@ -110,7 +108,7 @@ Zotero.SyncPDFTools = new function () {
             
         }else{
             path = this.getFullPath(this.getAltPath(path))
-            Zotero.debug("open remote file: "+path)
+            Zotero.debug("open synced file: "+path)
         }
         if(!await OS.File.exists(path)){
             return false
